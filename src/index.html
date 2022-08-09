@@ -1,0 +1,95 @@
+{% set title = 'AG' %}
+{% extends "templates/default.html" %}
+
+{% set slider = [
+{img: "name1", alt: "alt1"},
+{img: "name2", alt: "alt2"}
+]%}
+
+{% macro imageSvg(name, class, width, height) %}
+<svg class="{{ class }}" width="{{ width }}" height="{{ height }}">
+  <use xlink:href='img/svg/sprite-black.svg#{{ name }}'></use>
+</svg>
+{% endmacro %}
+{% macro imageSvgColor(name, class, width, height, alt) %}
+<svg class="{{ class }}" width="{{ width }}" height="{{ height }}" aria-label="{{ alt }}">
+  <use xlink:href='img/svg/sprite-color.svg#{{ name }}'></use>
+</svg>
+{% endmacro %}
+{% macro imageJpg(classPicture, name, classImg, alt, width, height) %}
+<picture class="{{ classPicture }}">
+  <source srcset="img/{{ name }}.webp" type="image/webp">
+  <img src="img/{{ name }}.jpg" alt="{{ alt }}" class="{{ classImg }}" width="{{ width }}" height="{{ height }}">
+</picture>
+{% endmacro %}
+
+{{ imageJpg('logo__picture', 'logo', 'logo__img', 'alt', '150', '150') }}
+
+{% for item in slider %}
+<li class="slider__item">
+  <picture class="slider__picture">
+    <source srcset="img/{{ item.img }}.webp" type="image/webp">
+    <img src="img/{{ item.img }}.jpg" alt="{{ item.alt }}" class="slider__img" height="200">
+  </picture>
+</li>
+{% endfor %}
+
+{% block content %}
+
+<header class="header">
+  <div class="logo">логотип</div>
+  <nav class="nav">
+    <ul class="nav__list">
+      <li class="nav__item">Лес</li>
+      <li class="nav__item">Кровельные работы</li>
+      <li class="nav__item">Общестроительные работы</li>
+    </ul>
+  </nav>
+  <button class="btn">Кнопка</button>
+</header>
+
+<main>
+  <div class="prew">
+    <div class="prew-img">
+      {{ imageJpg('prew-img__picture', 'test', 'prew-img__img', 'Фото на картинке', '150', '100') }}
+    </div>
+    <div class="prew-main">
+      <div class="prew-main__logo">Подробный логотип</div>
+      <h1 class="prew-main__title">Название сайта</h1>
+      <p class="prew-main__description">Какое-то описание, что тут можно найти. Кому и почему может быть полезный этот
+        сайт.</p>
+    </div>
+
+  </div>
+  <section class="general-wrap">
+    <div class="container">
+      <div class="general">
+        <h2 class="general__title">Что можно тут найти</h2>
+        <ul class="general__list">
+          <li class="general__item">
+            <a href="#" class="general__link">Лес</a>
+          </li>
+          <li class="general__item">
+            <a href="#" class="general__link">Кровля</a>
+          </li>
+          <li class="general__item">
+            <a href="#" class="general__link">Разные</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <ul class="footer__list">
+      <li class="footer__item">Какая-нибудь информация</li>
+      <li class="footer__item">Какая-нибудь ссылка</li>
+      <li class="footer__item">2022</li>
+    </ul>
+  </div>
+</footer>
+
+{% endblock %}
