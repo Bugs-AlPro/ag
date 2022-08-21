@@ -39,14 +39,16 @@
 <div class="header-wrap">
   <div class="container">
     <header class="header">
-      <div class="logo">логотип</div>
+      <div class="logo">
+        <a href="index.html">логотип</a>
+      </div>
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item">
             <a href="forest.html" class="nav__link">Лес</a>
           </li>
           <li class="nav__item">
-            <a href="roof.html" class="nav__link">Кровельные работы</a>
+            <div class="nav__link nav__link--current">Кровельные работы</div>
           </li>
           <li class="nav__item">
             <a href="other.html" class="nav__link">Общестроительные работы</a>
@@ -66,44 +68,14 @@
 <main>
   <div class="prew">
     <div class="prew-img">
-      {{ imageJpg('prew-img__picture', 'test', 'prew-img__img', 'Фото на картинке', '150', '100') }}
+      {{ imageJpg('prew-img__picture', 'test', 'prew-img__img', 'roof', '150', '100') }}
     </div>
-    <div class="prew-main">
-      <div class="prew-main__logo">Подробный логотип</div>
-      <h1 class="prew-main__title">Короткое и ёмкое название</h1>
-      <p class="prew-main__description">Какое-то описание, что тут можно найти. Кому и почему может быть полезный этот
-        сайт.</p>
-    </div>
-
   </div>
-  <section class="general-wrap">
-    <div class="container">
-      <div class="general">
-        <h2 class="general__title">Наши предложения</h2>
-        <ul class="general__list offer">
-          <li class="offer__item">
-            <a href="forest.html" class="offer__link offer__link--forest">
-              {{ imageSvgColor('forest', 'offer__svg', '50px', '50px', 'forest') }}
-              <span>Лес</span>
-            </a>
-          </li>
-          <li class="offer__item">
-            <a href="roof.html" class="offer__link offer__link--house">
-              {{ imageSvgColor('house', 'offer__svg', '50px', '50px', 'house') }}
-              <span>Кровельные работы</span>
-            </a>
-          </li>
-          <li class="offer__item">
-            <a href="other.html" class="offer__link offer__link--hammer">
-              {{ imageSvgColor('hammer', 'offer__svg', '50px', '50px', 'hammer') }}
-              <span>Разные работы</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
 
+  <section class="section">
+    <h2>Кровельные работы</h2>
+    <p>В этом разделе будет что-то рассказано о том, какие услуги можно получить в отношении кровельных работ</p>
+  </section>
   {% include "includes/feedback.html" %}
 </main>
 
