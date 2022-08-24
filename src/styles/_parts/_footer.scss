@@ -1,0 +1,25 @@
+.footer-wrap {
+  background-color: rgb(89, 87, 100);
+  padding: 30px;
+}
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+
+  &__link {
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 1em;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 1.3em;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    border-bottom: 2px solid gray;
+  }
+}

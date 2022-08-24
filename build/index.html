@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="лес, кровля, общестроительные работы">
   <meta name="description" content="Тут можно сделать короткое описание сайта.">
-  <title>AG</title>
+  <title>Cosapro</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/light.css" media="(prefers-color-scheme: light)">
   <link rel="stylesheet" href="css/dark.css" media="(prefers-color-scheme: dark)">
@@ -17,7 +17,7 @@
   
 
 <div class="header-wrap">
-  <div class="container">
+  <div class="container container--header">
     <header class="header">
       <div class="logo">логотип</div>
       <nav class="nav">
@@ -30,6 +30,9 @@
           </li>
           <li class="nav__item">
             <a href="other.html" class="nav__link">Общестроительные работы</a>
+          </li>
+          <li class="nav__item">
+            <a href="#vacancies" class="nav__link">Вакансии</a>
           </li>
           <li class="nav__item">
             <a href="#feedback" class="nav__link">Связаться с нами</a>
@@ -62,10 +65,11 @@
     </div>
 
   </div>
+
   <section class="general-wrap">
     <div class="container">
       <div class="general">
-        <h2 class="general__title">Наши предложения</h2>
+        <h2 class="general__title title">Наши предложения</h2>
         <ul class="general__list offer">
           <li class="offer__item">
             <a href="forest.html" class="offer__link offer__link--forest">
@@ -102,10 +106,36 @@
     </div>
   </section>
 
+  <section class="vacancies-wrap" id="vacancies">
+    <div class="container">
+      <div class="vacancies">
+        <h2 class="vacancies__title title">
+          Вакансии
+        </h2>
+        <ul class="vacancies__list vacancy">
+          <li class="vacancy__item">
+            <h3 class="vacancy__title">Помошник в лесу</h3>
+            <div class="vacancy__description">Треубется помошник с полной занятостью, на сезон осень-весна.</div>
+          </li>
+          <li class="vacancy__item">
+            <h3 class="vacancy__title">Помошник на крышу</h3>
+            <div class="vacancy__description">Треубется помошник с полной занятостью, для выполнений работ на крыше.
+              Требование: иметь допуск к таким видам работ.</div>
+          </li>
+          <li class="vacancy__item">
+            <h3 class="vacancy__title">Сезонный рабочий</h3>
+            <div class="vacancy__description">Треубется сезонный рабочий с частичной занятостью.</div>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section class="feedback-wrap" id="feedback">
   <div class="container">
     <div class="feedback">
-      <h2 class="feedback__title">Оставьте свой контакт и мы с вами свяжемся</h2>
+      <h2 class="feedback__title title">Обратная связь</h2>
       <form class="feedback__form form" action="#" method="GET">
 
         <label for="name" class="form__label hidden-text">Ваше имя</label>
@@ -128,23 +158,23 @@
     <footer>
       <ul class="footer__list contacts">
         <li class="contacts__item">
-          <a href="#" class="contacts__link">
+          <a href="tel:+3584578326996" class="contacts__link">
             
 <svg class="svg" width="20px" height="20px">
   <use xlink:href='img/svg/sprite-black.svg#phone'></use>
 </svg>
 
-            <span>551-994-32-23</span>
+            <span>+358 457832 6996</span>
           </a>
         </li>
         <li class="contacts__item">
-          <a href="#" class="contacts__link">
+          <a href="mailto:cosapro@gmail.com" class="contacts__link">
             
 <svg class="svg" width="20px" height="20px">
   <use xlink:href='img/svg/sprite-black.svg#email'></use>
 </svg>
 
-            <span>ag@gmail.com</span>
+            <span>cosapro@gmail.com</span>
           </a>
         </li>
       </ul>

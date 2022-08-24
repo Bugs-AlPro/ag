@@ -1,0 +1,13 @@
+.vacancies-wrap {
+  padding: 100px 0;
+}
+
+.vacancy {
+  &__title {
+    font-size: 1.3em;
+  }
+
+  &__description {
+    font-size: 1.3em;
+  }
+}

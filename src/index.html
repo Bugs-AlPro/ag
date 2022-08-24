@@ -1,10 +1,5 @@
-{% set title = 'AG' %}
+{% set title = 'Cosapro' %}
 {% extends "templates/default.html" %}
-
-{% set slider = [
-{img: "name1", alt: "alt1"},
-{img: "name2", alt: "alt2"}
-]%}
 
 {% macro imageSvg(name, class, width, height) %}
 <svg class="{{ class }}" width="{{ width }}" height="{{ height }}">
@@ -37,7 +32,7 @@
 {% block content %}
 
 <div class="header-wrap">
-  <div class="container">
+  <div class="container container--header">
     <header class="header">
       <div class="logo">логотип</div>
       <nav class="nav">
@@ -50,6 +45,9 @@
           </li>
           <li class="nav__item">
             <a href="other.html" class="nav__link">Общестроительные работы</a>
+          </li>
+          <li class="nav__item">
+            <a href="#vacancies" class="nav__link">Вакансии</a>
           </li>
           <li class="nav__item">
             <a href="#feedback" class="nav__link">Связаться с нами</a>
@@ -77,10 +75,11 @@
     </div>
 
   </div>
+
   <section class="general-wrap">
     <div class="container">
       <div class="general">
-        <h2 class="general__title">Наши предложения</h2>
+        <h2 class="general__title title">Наши предложения</h2>
         <ul class="general__list offer">
           <li class="offer__item">
             <a href="forest.html" class="offer__link offer__link--forest">
@@ -99,6 +98,32 @@
               {{ imageSvgColor('hammer', 'offer__svg', '50px', '50px', 'hammer') }}
               <span>Разные работы</span>
             </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="vacancies-wrap" id="vacancies">
+    <div class="container">
+      <div class="vacancies">
+        <h2 class="vacancies__title title">
+          Вакансии
+        </h2>
+        <ul class="vacancies__list vacancy">
+          <li class="vacancy__item">
+            <h3 class="vacancy__title">Помошник в лесу</h3>
+            <div class="vacancy__description">Треубется помошник с полной занятостью, на сезон осень-весна.</div>
+          </li>
+          <li class="vacancy__item">
+            <h3 class="vacancy__title">Помошник на крышу</h3>
+            <div class="vacancy__description">Треубется помошник с полной занятостью, для выполнений работ на крыше.
+              Требование: иметь допуск к таким видам работ.</div>
+          </li>
+          <li class="vacancy__item">
+            <h3 class="vacancy__title">Сезонный рабочий</h3>
+            <div class="vacancy__description">Треубется сезонный рабочий с частичной занятостью.</div>
+
           </li>
         </ul>
       </div>
