@@ -1,8 +1,11 @@
 {% set title = 'Cosapro' %}
+{% set pagesDisable = 'disable' %}
+{% set roofCurrent = 'nav__link--current' %}
+
 {% extends "templates/default.html" %}
 
-{% set slider = [
-{img: "foto1", alt: "alt1"},
+{% set gallery = [
+{img: "foto1", class: "gallery__item--current", alt: "alt1"},
 {img: "foto2", alt: "alt2"},
 {img: "foto3", alt: "alt3"},
 {img: "foto4", alt: "alt4"},
@@ -27,6 +30,12 @@
   <img src="img/{{ name }}.jpg" alt="{{ alt }}" class="{{ classImg }}" width="{{ width }}" height="{{ height }}">
 </picture>
 {% endmacro %}
+{% macro imagePng(classPicture, name, classImg, alt, width, height) %}
+<picture class="{{ classPicture }}">
+  <source srcset="img/{{ name }}.webp" type="image/webp">
+  <img src="img/{{ name }}.png" alt="{{ alt }}" class="{{ classImg }}" width="{{ width }}" height="{{ height }}">
+</picture>
+{% endmacro %}
 
 {{ imageJpg('logo__picture', 'logo', 'logo__img', 'alt', '150', '150') }}
 
@@ -45,10 +54,15 @@
   <div class="container">
     <header class="header">
       <div class="logo">
-        <a href="index.html">логотип</a>
+        <a href="index.html" class="logo__link">
+          {{ imagePng('logo__picture', 'logo-png', 'logo__img', 'logo', '50px', '50px') }}
+        </a>
       </div>
       <nav class="nav">
         <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link">Главная</a>
+          </li>
           <li class="nav__item">
             <a href="forest.html" class="nav__link">Лес</a>
           </li>
@@ -58,9 +72,9 @@
           <li class="nav__item">
             <a href="other.html" class="nav__link">Общестроительные работы</a>
           </li>
-          <li class="nav__item">
-            <a href="index.html#vacancies" class="nav__link">Вакансии</a>
-          </li>
+          <!-- <li class="nav__item">
+            <a href="vacancies.html" class="nav__link">Вакансии</a>
+          </li> -->
           <li class="nav__item">
             <a href="#feedback" class="nav__link">Связаться с нами</a>
           </li>
@@ -87,12 +101,12 @@
         <p class="info__description">В этом разделе будет что-то рассказано о том, какие услуги можно получить в
           отношении кровельных работ, и на фото можно увидеть примеры выполненых работ.</p>
         <h3 class="info__subtitle">Галерея</h3>
-        <ul class="info__slider slider">
-          {% for item in slider %}
-          <li class="slider__item">
-            <picture class="slider__picture">
+        <ul class="info__gallery gallery">
+          {% for item in gallery %}
+          <li class="gallery__item {{ item.class }}">
+            <picture class="gallery__picture">
               <source srcset="img/{{ item.img }}.webp" type="image/webp">
-              <img src="img/{{ item.img }}.jpg" alt="{{ item.alt }}" class="slider__img" height="200">
+              <img src="img/{{ item.img }}.jpg" alt="{{ item.alt }}" class="gallery__img" height="200">
             </picture>
           </li>
           {% endfor %}

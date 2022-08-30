@@ -1,8 +1,16 @@
 {% set title = 'Cosapro' %}
-{% set indexDisable = 'disable' %}
-{% set vacanciesDisable = 'disable' %}
-
+{% set pagesDisable = 'disable' %}
 {% extends "templates/default.html" %}
+
+{% set slider = [
+{img: "foto1", alt: "alt1"},
+{img: "foto2", alt: "alt2"},
+{img: "foto3", alt: "alt3"},
+{img: "foto4", alt: "alt4"},
+{img: "foto5", alt: "alt5"},
+{img: "foto6", alt: "alt6"},
+{img: "foto7", alt: "alt7"}
+]%}
 
 {% macro imageSvg(name, class, width, height) %}
 <svg class="{{ class }}" width="{{ width }}" height="{{ height }}">
@@ -45,41 +53,31 @@
 <main>
   <div class="prew">
     <div class="prew-img">
-      {{ imageJpg('prew-img__picture', 'test', 'prew-img__img', 'Фото на картинке', '150', '100') }}
+      {{ imageJpg('prew-img__picture', 'roof', 'prew-img__img', 'roof', '150', '100') }}
     </div>
-    <div class="prew-main">
-      <div class="prew-main__logo">
-        {{ imagePng('prew-main__picture', 'logo-png', 'prew-main__img', 'logo', '50px', '50px') }}
-      </div>
-      <h1 class="prew-main__title">Cosapro OY</h1>
-      <p class="prew-main__description">Какое-то описание, что тут можно найти. Кому и почему может быть полезный этот
-        сайт.</p>
-    </div>
-
   </div>
 
-  <section class="general-wrap">
+
+  <section class="vacancies-wrap" id="vacancies">
     <div class="container">
-      <div class="general">
-        <h2 class="general__title title">Наши предложения</h2>
-        <ul class="general__list offer">
-          <li class="offer__item">
-            <a href="forest.html" class="offer__link offer__link--forest">
-              {{ imageSvgColor('forest', 'offer__svg', '50px', '50px', 'forest') }}
-              <span>Лес</span>
-            </a>
+      <div class="vacancies">
+        <h2 class="vacancies__title title">
+          Вакансии
+        </h2>
+        <ul class="vacancies__list vacancy">
+          <li class="vacancy__item">
+            <h3 class="vacancy__title">Помошник в лесу</h3>
+            <div class="vacancy__description">Треубется помошник с полной занятостью, на сезон осень-весна.</div>
           </li>
-          <li class="offer__item">
-            <a href="roof.html" class="offer__link offer__link--house">
-              {{ imageSvgColor('house', 'offer__svg', '50px', '50px', 'house') }}
-              <span>Кровельные работы</span>
-            </a>
+          <li class="vacancy__item">
+            <h3 class="vacancy__title">Помошник на крышу</h3>
+            <div class="vacancy__description">Треубется помошник с полной занятостью, для выполнений работ на крыше.
+              Требование: иметь допуск к таким видам работ.</div>
           </li>
-          <li class="offer__item">
-            <a href="other.html" class="offer__link offer__link--hammer">
-              {{ imageSvgColor('hammer', 'offer__svg', '50px', '50px', 'hammer') }}
-              <span>Разные работы</span>
-            </a>
+          <li class="vacancy__item">
+            <h3 class="vacancy__title">Сезонный рабочий</h3>
+            <div class="vacancy__description">Треубется сезонный рабочий с частичной занятостью.</div>
+
           </li>
         </ul>
       </div>

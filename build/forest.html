@@ -17,24 +17,38 @@
   
 
 <div class="header-wrap">
-  <div class="container">
+  <div class="container container--header">
     <header class="header">
       <div class="logo">
-        <a href="index.html">логотип</a>
+        <picture class="logo__picture disable">
+          <source srcset="img/logo-png.webp" type="image/webp">
+          <img src="img/logo-png.png" alt="logo" class="logo__img" width="50px" height="50px">
+        </picture>
+        <a href="index.html" class="logo__link ">
+          
+<picture class="logo__picture">
+  <source srcset="img/logo-png.webp" type="image/webp">
+  <img src="img/logo-png.png" alt="logo" class="logo__img" width="50px" height="50px">
+</picture>
+
+        </a>
       </div>
       <nav class="nav">
         <ul class="nav__list">
-          <li class="nav__item">
-            <div class="nav__link nav__link--current">Лес</div>
+          <li class="nav__item ">
+            <a href="index.html" class="nav__link">Главная</a>
           </li>
           <li class="nav__item">
-            <a href="roof.html" class="nav__link">Кровельные работы</a>
+            <a href="forest.html" class="nav__link nav__link--current">Лес</a>
           </li>
           <li class="nav__item">
-            <a href="other.html" class="nav__link">Общестроительные работы</a>
+            <a href="roof.html" class="nav__link ">Кровельные работы</a>
           </li>
           <li class="nav__item">
-            <a href="index.html#vacancies" class="nav__link">Вакансии</a>
+            <a href="other.html" class="nav__link ">Общестроительные работы</a>
+          </li>
+          <li class="nav__item disable  ">
+            <a href="vacancies.html" class="nav__link ">Вакансии</a>
           </li>
           <li class="nav__item">
             <a href="#feedback" class="nav__link">Связаться с нами</a>
@@ -42,6 +56,7 @@
         </ul>
       </nav>
       <button class="header-btn" aria-label="Меню" type="button">Menu</button>
+
     </header>
 
   </div>
@@ -68,54 +83,55 @@
         <p class="info__description">В этом разделе будет что-то рассказано о том, какие услуги можно получить в
           отношении Леса, и на фото можно увидеть примеры выполненых работ.</p>
         <h3 class="info__subtitle">Галерея</h3>
-        <ul class="info__slider slider">
+
+        <ul class="info__gallery gallery">
           
-          <li class="slider__item">
-            <picture class="slider__picture">
+          <li class="gallery__item gallery__item--current">
+            <picture class="gallery__picture">
               <source srcset="img/foto1.webp" type="image/webp">
-              <img src="img/foto1.jpg" alt="alt1" class="slider__img" height="200">
+              <img src="img/foto1.jpg" alt="alt1" class="gallery__img" height="200">
             </picture>
           </li>
           
-          <li class="slider__item">
-            <picture class="slider__picture">
+          <li class="gallery__item ">
+            <picture class="gallery__picture">
               <source srcset="img/foto2.webp" type="image/webp">
-              <img src="img/foto2.jpg" alt="alt2" class="slider__img" height="200">
+              <img src="img/foto2.jpg" alt="alt2" class="gallery__img" height="200">
             </picture>
           </li>
           
-          <li class="slider__item">
-            <picture class="slider__picture">
+          <li class="gallery__item ">
+            <picture class="gallery__picture">
               <source srcset="img/foto3.webp" type="image/webp">
-              <img src="img/foto3.jpg" alt="alt3" class="slider__img" height="200">
+              <img src="img/foto3.jpg" alt="alt3" class="gallery__img" height="200">
             </picture>
           </li>
           
-          <li class="slider__item">
-            <picture class="slider__picture">
+          <li class="gallery__item ">
+            <picture class="gallery__picture">
               <source srcset="img/foto4.webp" type="image/webp">
-              <img src="img/foto4.jpg" alt="alt4" class="slider__img" height="200">
+              <img src="img/foto4.jpg" alt="alt4" class="gallery__img" height="200">
             </picture>
           </li>
           
-          <li class="slider__item">
-            <picture class="slider__picture">
+          <li class="gallery__item ">
+            <picture class="gallery__picture">
               <source srcset="img/foto5.webp" type="image/webp">
-              <img src="img/foto5.jpg" alt="alt5" class="slider__img" height="200">
+              <img src="img/foto5.jpg" alt="alt5" class="gallery__img" height="200">
             </picture>
           </li>
           
-          <li class="slider__item">
-            <picture class="slider__picture">
+          <li class="gallery__item ">
+            <picture class="gallery__picture">
               <source srcset="img/foto6.webp" type="image/webp">
-              <img src="img/foto6.jpg" alt="alt6" class="slider__img" height="200">
+              <img src="img/foto6.jpg" alt="alt6" class="gallery__img" height="200">
             </picture>
           </li>
           
-          <li class="slider__item">
-            <picture class="slider__picture">
+          <li class="gallery__item ">
+            <picture class="gallery__picture">
               <source srcset="img/foto7.webp" type="image/webp">
-              <img src="img/foto7.jpg" alt="alt7" class="slider__img" height="200">
+              <img src="img/foto7.jpg" alt="alt7" class="gallery__img" height="200">
             </picture>
           </li>
           

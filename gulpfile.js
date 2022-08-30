@@ -140,8 +140,8 @@ export const svgcolor = () => {
     .pipe(svgSprite({
       mode: {
         stack: {
-          sprite: "../sprite-color.svg"
-          // example: true
+          sprite: "../sprite-color.svg",
+          example: true
         }
       }
     }))
