@@ -391,8 +391,8 @@ li {
 
   .gallery {
     display: grid;
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto auto;
     grid-auto-flow: row;
     gap: 1em;
 
@@ -407,10 +407,13 @@ li {
 
     &__item--current {
       grid-column-start: 1;
-      grid-column-end: 2;
+      grid-column-end: 6;
       grid-row-start: 1;
-      grid-row-end: 5;
+      grid-row-end: 2;
       box-shadow: 0 0 5px 5px gray;
+      margin: 30px;
+      max-width: 400px;
+      justify-self: center;
     }
 
     &__picture {

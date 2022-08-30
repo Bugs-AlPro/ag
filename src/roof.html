@@ -49,43 +49,7 @@
 {% endfor %}
 
 {% block content %}
-
-<div class="header-wrap">
-  <div class="container">
-    <header class="header">
-      <div class="logo">
-        <a href="index.html" class="logo__link">
-          {{ imagePng('logo__picture', 'logo-png', 'logo__img', 'logo', '50px', '50px') }}
-        </a>
-      </div>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="index.html" class="nav__link">Главная</a>
-          </li>
-          <li class="nav__item">
-            <a href="forest.html" class="nav__link">Лес</a>
-          </li>
-          <li class="nav__item">
-            <div class="nav__link nav__link--current">Кровельные работы</div>
-          </li>
-          <li class="nav__item">
-            <a href="other.html" class="nav__link">Общестроительные работы</a>
-          </li>
-          <!-- <li class="nav__item">
-            <a href="vacancies.html" class="nav__link">Вакансии</a>
-          </li> -->
-          <li class="nav__item">
-            <a href="#feedback" class="nav__link">Связаться с нами</a>
-          </li>
-        </ul>
-      </nav>
-      <button class="header-btn" aria-label="Меню" type="button">Menu</button>
-    </header>
-
-  </div>
-
-</div>
+{% include "includes/header.html" %}
 
 <main>
   <div class="prew">
