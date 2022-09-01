@@ -251,15 +251,18 @@ li {
   }
 
   .prew-img {
-    // height: 60vh;
+    min-height: 220px;
+    height: 70vw;
     overflow: hidden;
     // top: -100px;
     position: relative;
 
     &__img {
+      position: absolute;
+      bottom: 0;
       width: 100%;
       height: auto;
-      // max-height: 300px;
+      // max-height: 500px;
     }
   }
 

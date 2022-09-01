@@ -194,10 +194,14 @@ li {
     position: relative;
   }
   .prew-img {
+    min-height: 220px;
+    height: 70vw;
     overflow: hidden;
     position: relative;
   }
   .prew-img__img {
+    position: absolute;
+    bottom: 0;
     width: 100%;
     height: auto;
   }
