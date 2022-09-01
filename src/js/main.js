@@ -6,6 +6,10 @@ menuBtn.addEventListener('click', () => {
   menuBtn.classList.toggle('header-btn--open');
   nav.classList.toggle('nav--open');
 })
+nav.addEventListener('click', () => {
+  menuBtn.classList.toggle('header-btn--open');
+  nav.classList.toggle('nav--open');
+})
 
 const galleryImges = document.querySelectorAll('.gallery__item');
 
