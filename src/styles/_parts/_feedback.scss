@@ -50,6 +50,7 @@
 @include media-down(md) {
 
   .feedback {
+    padding: 0 20px;
 
     &__title {
       font-size: 2em;
