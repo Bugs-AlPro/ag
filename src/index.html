@@ -1,6 +1,5 @@
 {% set title = 'Cosapro' %}
 {% set indexDisable = 'disable' %}
-{% set vacanciesDisable = 'disable' %}
 
 {% extends "templates/default.html" %}
 
@@ -49,7 +48,10 @@
     </div>
     <div class="prew-main">
       <div class="prew-main__logo">
-        <img src="img/logo-svg.svg" class="prew-main__img" width="150px" height="150px" alt="Cosapro Logo">
+        <picture class="prew-main__picture {{ pagesDisable }}">
+          <source srcset="img/small-png-logo.webp" type="image/webp">
+          <img src="img/small-png-logo.png" alt="Cosapro Logo" class="prew-main__img" width="160px" height="100px">
+        </picture>
       </div>
       <h1 class="prew-main__title">Cosapro OY</h1>
       <p class="prew-main__description">Какое-то описание, что тут можно найти. Кому и почему может быть полезный этот
@@ -61,27 +63,37 @@
   <section class="general-wrap">
     <div class="container">
       <div class="general">
-        <h2 class="general__title title">Наши предложения</h2>
+        <h2 class="general__title title">VALITSE TARPEESI</h2>
         <ul class="general__list offer">
           <li class="offer__item">
-            <a href="forest.html" class="offer__link offer__link--forest">
-              {{ imageSvgColor('forest', 'offer__svg', '50px', '50px', 'forest') }}
-              <span>Работы в лесу</span>
+            <a href="iron.html" class="offer__link">
+              {{ imagePng('offer__picture', 'link-iron', 'offer__img', 'alt', '50px', '50px') }}
+              <!-- <span>Разные работы</span> -->
             </a>
           </li>
           <li class="offer__item">
-            <a href="roof.html" class="offer__link offer__link--house">
-              {{ imageSvgColor('house', 'offer__svg', '50px', '50px', 'house') }}
-              <span>Кровельные работы</span>
+
+            <a href="forest.html" class="offer__link">
+              {{ imagePng('offer__picture', 'link-forest', 'offer__img', 'alt', '50px', '50px') }}
+
+              <!-- <span>Работы в лесу</span> -->
+            </a>
+          </li>
+          <li class="offer__item offer__item--roof">
+            <a href="roof.html" class="offer__link">
+              {{ imagePng('offer__picture', 'link-roof', 'offer__img', 'alt', '50px', '50px') }}
+              <!-- <span>Кровельные работы</span> -->
             </a>
           </li>
           <li class="offer__item">
-            <a href="other.html" class="offer__link offer__link--hammer">
-              {{ imageSvgColor('hammer', 'offer__svg', '50px', '50px', 'hammer') }}
-              <span>Разные работы</span>
+            <a href="other.html" class="offer__link">
+              {{ imagePng('offer__picture', 'link-other', 'offer__img', 'alt', '50px', '50px') }}
+              <!-- <span>Разные работы</span> -->
             </a>
           </li>
+
         </ul>
+
       </div>
     </div>
   </section>

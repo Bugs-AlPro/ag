@@ -2,31 +2,50 @@
   <div class="container container--header">
     <header class="header">
       <div class="logo">
-        <img src="img/logo-svg.svg" class="logo__img {{ pagesDisable }}" width="50px" height="50px" alt="Cosapro Logo">
+        <!-- <img src="img/logo-svg.svg" class="logo__img " width="50px" height="50px" alt="Cosapro Logo"> -->
+        <picture class="logo__picture {{ pagesDisable }}">
+          <source srcset="img/png-logo.webp" type="image/webp">
+          <img src="img/png-logo.png" alt="Cosapro Logo" class="logo__img" width="160px" height="100px">
+        </picture>
 
         <a href="index.html" class="logo__link {{ indexDisable }}">
-          <img src="img/logo-svg.svg" class="logo__img" width="50px" height="50px" alt="Cosapro Logo">
+
+          <picture class="logo__picture">
+            <source srcset="img/png-logo.webp" type="image/webp">
+            <img src="img/png-logo.png" alt="Cosapro Logo" class="logo__img" width="80px" height="50px">
+          </picture>
         </a>
       </div>
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item {{ indexDisable }}">
-            <a href="index.html" class="nav__link">Главная</a>
+            <a href="index.html" class="nav__link">Home</a>
           </li>
+
           <li class="nav__item">
-            <a href="forest.html" class="nav__link {{ forestCurrent }}">Лес</a>
+            <a href="iron.html" class="nav__link {{ ironCurrent }}">PELTITYÖT</a>
           </li>
+
           <li class="nav__item">
-            <a href="roof.html" class="nav__link {{ roofCurrent }}">Кровельные работы</a>
+            <a href="forest.html" class="nav__link {{ forestCurrent }}">METSÄNHOITO</a>
           </li>
+
           <li class="nav__item">
-            <a href="other.html" class="nav__link {{ otherCurrent }}">Общестроительные работы</a>
+            <a href="roof.html" class="nav__link {{ roofCurrent }}">KATTOTYÖT</a>
           </li>
-          <li class="nav__item {{ pagesDisable }} {{ vacanciesDisable }} ">
-            <a href="vacancies.html" class="nav__link ">Вакансии</a>
-          </li>
+
+
+
           <li class="nav__item">
-            <a href="#feedback" class="nav__link">Связаться с нами</a>
+            <a href="other.html" class="nav__link {{ otherCurrent }}">RAKENNUSTEN</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="certificates.html" class="nav__link {{ certificatesCurrent }} ">TODISTUS</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#feedback" class="nav__link">YHTEYSTIEDOT</a>
           </li>
         </ul>
       </nav>

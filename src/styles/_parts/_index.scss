@@ -70,6 +70,9 @@ li {
     left: calc(50% - 300px);
     text-align: center;
     padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &__logo {
       // height: 100px;
@@ -84,7 +87,7 @@ li {
     }
 
     &__img {
-      width: 150px;
+      width: 100%;
       height: auto;
       z-index: 2;
       position: relative;
@@ -123,89 +126,53 @@ li {
 
   .offer {
     display: grid;
+    // border: 1px solid red;
     // grid-auto-flow: column;
     // flex-wrap: wrap;
-    grid-template-columns: 1fr 1fr 1fr;
-    // grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
     gap: 2em;
 
+    // &__picture {
+    //   display: block;
+    // }
+
     &__item {
-      height: max-content;
+      // border: 1px solid red;
+      // height: max-content;
+      // position: relative;
+      display: block;
+
     }
+
+
 
     &__link {
-      padding: 30px;
+      // border: 1px solid red;
+      // padding: 30px;
       position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      gap: 1em;
-      aspect-ratio: 1;
+      display: block;
+      line-height: 0;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      // align-items: center;
+      // text-decoration: none;
+      // gap: 1em;
+      // aspect-ratio: 1;
     }
 
-    &__link::before {
-      position: absolute;
+    &__img {
+      // border: 1px solid red;
       width: 100%;
-      height: 100%;
-      background-color: rgba(56, 56, 56, 0.1);
-      top: 0;
-      left: 0;
-      content: "";
-      z-index: 1;
+      height: auto;
     }
 
-    &__link:hover::before {
-      background-color: rgba(56, 56, 56, 0.3);
+    &__link:hover {
+
+      box-shadow: 0 0 0 2px rgba(56, 56, 56, 0.3);
     }
 
-    &__link span {
-      text-align: center;
-      position: absolute;
-      // top: 20px;
-      font-weight: 600;
-      font-size: 1.4em;
-      color: white;
-      // text-transform: uppercase;
-      // background-color: rgba(128, 128, 128, 0.507);
-      padding: 5px;
-      z-index: 2;
-    }
-
-    &__link--forest {
-      background-color: hsl(120, 81%, 85%);
-    }
-
-    &__link--forest:hover,
-    &__link--forest:focus {
-      box-shadow: 0 0 0 5px hsl(120, 20%, 57%);
-    }
-
-    &__link--house {
-      background-color: rgb(255, 219, 184);
-    }
-
-    &__link--house:hover,
-    &__link--house:focus {
-      box-shadow: 0 0 0 5px rgb(197, 167, 138);
-    }
-
-    &__link--hammer {
-      background-color: rgb(206, 205, 203);
-    }
-
-    &__link--hammer:hover,
-    &__link--hammer:focus {
-      box-shadow: 0 0 0 5px rgb(172, 171, 171);
-    }
-
-
-    &__svg {
-      width: 50%;
-      height: 50%;
-      // opacity: 0.7;
-    }
   }
 
   .gallery {
@@ -306,8 +273,9 @@ li {
     }
 
     &__img {
-      width: 150px;
-      height: 150px;
+      width: 100%;
+      max-width: 350px;
+      height: auto;
     }
 
     &__title {
@@ -328,12 +296,13 @@ li {
 
   .offer {
     display: flex;
+
     flex-wrap: wrap;
-    gap: 2em;
+    gap: 1em;
     // grid-template-columns: 1fr 1fr;
     // grid-template-rows: 1fr 1fr;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
 
     // &__item {
     //   min-width: 250px;
@@ -346,75 +315,83 @@ li {
       width: 40vw;
       // min-width: 200px;
       max-width: 400px;
-      padding: 30px;
+      line-height: 0;
+      // padding: 30px;
       position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      display: block;
+      // flex-direction: column;
+      // justify-content: center;
+      // align-items: center;
       text-decoration: none;
       gap: 1em;
+      // border: 1px solid red;
     }
 
-    &__link::before {
-      position: absolute;
+    &__img {
+      // border: 1px solid red;
       width: 100%;
-      height: 100%;
-      background-color: rgba(56, 56, 56, 0.1);
-      top: 0;
-      left: 0;
-      content: "";
-      z-index: 1;
+      height: auto;
     }
 
-    &__link:hover::before {
-      background-color: rgba(56, 56, 56, 0.3);
-    }
+    // &__link::before {
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 100%;
+    //   background-color: rgba(56, 56, 56, 0.1);
+    //   top: 0;
+    //   left: 0;
+    //   content: "";
+    //   z-index: 1;
+    // }
 
-    &__link span {
-      text-align: center;
-      position: absolute;
-      // top: 20px;
-      font-weight: 600;
-      font-size: 1em;
-      color: white;
-      text-transform: uppercase;
-      background-color: rgba(128, 128, 128, 0.507);
-      padding: 5px;
-    }
+    // &__link:hover::before {
+    //   background-color: rgba(56, 56, 56, 0.3);
+    // }
 
-    &__link--forest {
-      background-color: hsl(120, 87%, 85%);
-    }
+    // &__link span {
+    //   text-align: center;
+    //   position: absolute;
+    //   // top: 20px;
+    //   font-weight: 600;
+    //   font-size: 1em;
+    //   color: white;
+    //   text-transform: uppercase;
+    //   background-color: rgba(128, 128, 128, 0.507);
+    //   padding: 5px;
+    // }
 
-    &__link--forest:hover,
-    &__link--forest:focus {
-      box-shadow: 0 0 0 5px hsl(120, 20%, 57%);
-    }
+    // &__link--forest {
+    //   background-color: hsl(120, 87%, 85%);
+    // }
 
-    &__link--house {
-      background-color: rgb(255, 216, 180);
-    }
+    // &__link--forest:hover,
+    // &__link--forest:focus {
+    //   box-shadow: 0 0 0 5px hsl(120, 20%, 57%);
+    // }
 
-    &__link--house:hover,
-    &__link--house:focus {
-      box-shadow: 0 0 0 5px rgb(197, 167, 138);
-    }
+    // &__link--house {
+    //   background-color: rgb(255, 216, 180);
+    // }
 
-    &__link--hammer {
-      background-color: rgb(211, 210, 208);
-    }
+    // &__link--house:hover,
+    // &__link--house:focus {
+    //   box-shadow: 0 0 0 5px rgb(197, 167, 138);
+    // }
 
-    &__link--hammer:hover,
-    &__link--hammer:focus {
-      box-shadow: 0 0 0 5px rgb(172, 171, 171);
-    }
+    // &__link--hammer {
+    //   background-color: rgb(211, 210, 208);
+    // }
+
+    // &__link--hammer:hover,
+    // &__link--hammer:focus {
+    //   box-shadow: 0 0 0 5px rgb(172, 171, 171);
+    // }
 
 
-    &__svg {
-      width: 80%;
-      height: 80%;
-    }
+    // &__svg {
+    //   width: 80%;
+    //   height: 80%;
+    // }
   }
 
   .gallery {

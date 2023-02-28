@@ -1,0 +1,89 @@
+{% set title = 'Cosapro' %}
+{% set pagesDisable = 'disable' %}
+{% set ironCurrent = 'nav__link--current' %}
+
+{% extends "templates/default.html" %}
+
+{% set gallery = [
+{img: "foto1", class: "gallery__item--current", alt: "alt1"},
+{img: "foto2", alt: "alt2"},
+{img: "foto3", alt: "alt3"},
+{img: "foto4", alt: "alt4"},
+{img: "foto5", alt: "alt5"},
+{img: "foto6", alt: "alt6"},
+{img: "foto7", alt: "alt7"}
+]%}
+
+{% macro imageSvg(name, class, width, height) %}
+<svg class="{{ class }}" width="{{ width }}" height="{{ height }}">
+  <use xlink:href='img/svg/sprite-black.svg#{{ name }}'></use>
+</svg>
+{% endmacro %}
+{% macro imageSvgColor(name, class, width, height, alt) %}
+<svg class="{{ class }}" width="{{ width }}" height="{{ height }}" aria-label="{{ alt }}">
+  <use xlink:href='img/svg/sprite-color.svg#{{ name }}'></use>
+</svg>
+{% endmacro %}
+{% macro imageJpg(classPicture, name, classImg, alt, width, height) %}
+<picture class="{{ classPicture }}">
+  <source srcset="img/{{ name }}.webp" type="image/webp">
+  <img src="img/{{ name }}.jpg" alt="{{ alt }}" class="{{ classImg }}" width="{{ width }}" height="{{ height }}">
+</picture>
+{% endmacro %}
+{% macro imagePng(classPicture, name, classImg, alt, width, height) %}
+<picture class="{{ classPicture }}">
+  <source srcset="img/{{ name }}.webp" type="image/webp">
+  <img src="img/{{ name }}.png" alt="{{ alt }}" class="{{ classImg }}" width="{{ width }}" height="{{ height }}">
+</picture>
+{% endmacro %}
+
+{{ imageJpg('logo__picture', 'logo', 'logo__img', 'alt', '150', '150') }}
+
+{% for item in slider %}
+<li class="slider__item">
+  <picture class="slider__picture">
+    <source srcset="img/{{ item.img }}.webp" type="image/webp">
+    <img src="img/{{ item.img }}.jpg" alt="{{ item.alt }}" class="slider__img" height="200">
+  </picture>
+</li>
+{% endfor %}
+
+{% block content %}
+{% include "includes/header.html" %}
+
+<main>
+  <div class="prew">
+    <div class="prew-img">
+      {{ imageJpg('prew-img__picture', 'start', 'prew-img__img', 'roof', '150', '100') }}
+    </div>
+  </div>
+
+  <section class="roof-wrap">
+    <div class="container">
+      <div class="info">
+        <h2 class="info__title title">Рабыты с железом</h2>
+        <p class="info__description">В этом разделе будет что-то рассказано о том, какие услуги можно получить в
+          отношении кровельных работ, и на фото можно увидеть примеры выполненых работ.</p>
+        <h3 class="info__subtitle">Галерея</h3>
+        <ul class="info__gallery gallery">
+          {% for item in gallery %}
+          <li class="gallery__item {{ item.class }}">
+            <picture class="gallery__picture">
+              <source srcset="img/{{ item.img }}.webp" type="image/webp">
+              <img src="img/{{ item.img }}.jpg" alt="{{ item.alt }}" class="gallery__img" height="200">
+            </picture>
+          </li>
+          {% endfor %}
+
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+  {% include "includes/feedback.html" %}
+</main>
+
+{% include "includes/footer.html" %}
+
+{% endblock %}

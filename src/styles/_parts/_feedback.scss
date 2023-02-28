@@ -3,9 +3,18 @@
   padding: 100px 0;
 }
 
-@include media-up(md) {
+@include media-up(lg) {
   .feedback {
+    padding-top: 100px;
     text-align: center;
+    display: flex;
+    align-items: center;
+
+    &__img {
+      display: block;
+      width: 80%;
+      height: auto;
+    }
   }
 
   .form {
@@ -47,15 +56,24 @@
 }
 
 
-@include media-down(md) {
+@include media-down(lg) {
 
   .feedback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 0 20px;
 
     &__title {
       font-size: 2em;
       margin-bottom: 50px;
       color: rgb(110, 110, 110);
+    }
+
+    &__img {
+      width: 100%;
+      height: auto;
+      max-width: 400px;
     }
   }
 

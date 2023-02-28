@@ -11,19 +11,19 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-imagemin": "^7.1.0",
-    "gulp-sass": "^5.0.0",
-    "sass": "^1.39.0"
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.58.3"
   },
   "dependencies": {
-    "browser-sync": "^2.27.5",
-    "del": "^6.0.0",
+    "browser-sync": "^2.27.12",
+    "del": "^6.1.1",
     "gulp-changed": "^4.0.3",
     "gulp-cheerio": "^1.0.0",
     "gulp-clone": "^2.0.1",
     "gulp-nunjucks": "^5.1.0",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-webp": "^4.0.1",
-    "tiny-slider": "^2.9.3"
+    "tiny-slider": "^2.9.4"
   },
   "description": ""
 }

@@ -31,9 +31,10 @@
     &__img {
       // border: 5px solid red;
       position: relative;
+      display: block;
       // z-index: 3;
-      width: 100px;
-      height: 100px;
+      width: auto;
+      height: 130px;
       // opacity: 0.5;
       // fill: aqua;
       // stroke: red;
@@ -107,8 +108,9 @@
 
     &__list {
       display: flex;
+      justify-content: space-around;
       // flex-direction: column;
-      gap: 1em;
+      // gap: 1em;
 
     }
 
@@ -166,8 +168,9 @@
 
     // color: wheat;
     &__img {
-      width: 80px;
-      height: 80px;
+      width: 130px;
+      height: auto;
+      // background-color: aliceblue;
     }
   }
 

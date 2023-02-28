@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="fi">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="лес, кровля, общестроительные работы">
+  <meta name="keywords" content="Cosapro OY, METSÄNHOITO, KATTOTYÖT, PELTITYÖT, RAKENNUSTEN">
   <meta name="description" content="Тут можно сделать короткое описание сайта.">
   <title>Cosapro</title>
   <link rel="stylesheet" href="css/main.css">
@@ -19,31 +19,50 @@
   <div class="container container--header">
     <header class="header">
       <div class="logo">
-        <img src="img/logo-svg.svg" class="logo__img disable" width="50px" height="50px" alt="Cosapro Logo">
+        <!-- <img src="img/logo-svg.svg" class="logo__img " width="50px" height="50px" alt="Cosapro Logo"> -->
+        <picture class="logo__picture disable">
+          <source srcset="img/png-logo.webp" type="image/webp">
+          <img src="img/png-logo.png" alt="Cosapro Logo" class="logo__img" width="160px" height="100px">
+        </picture>
 
         <a href="index.html" class="logo__link ">
-          <img src="img/logo-svg.svg" class="logo__img" width="50px" height="50px" alt="Cosapro Logo">
+
+          <picture class="logo__picture">
+            <source srcset="img/png-logo.webp" type="image/webp">
+            <img src="img/png-logo.png" alt="Cosapro Logo" class="logo__img" width="80px" height="50px">
+          </picture>
         </a>
       </div>
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item ">
-            <a href="index.html" class="nav__link">Главная</a>
+            <a href="index.html" class="nav__link">Home</a>
           </li>
+
           <li class="nav__item">
-            <a href="forest.html" class="nav__link ">Лес</a>
+            <a href="iron.html" class="nav__link ">PELTITYÖT</a>
           </li>
+
           <li class="nav__item">
-            <a href="roof.html" class="nav__link ">Кровельные работы</a>
+            <a href="forest.html" class="nav__link ">METSÄNHOITO</a>
           </li>
+
           <li class="nav__item">
-            <a href="other.html" class="nav__link nav__link--current">Общестроительные работы</a>
+            <a href="roof.html" class="nav__link ">KATTOTYÖT</a>
           </li>
-          <li class="nav__item disable  ">
-            <a href="vacancies.html" class="nav__link ">Вакансии</a>
-          </li>
+
+
+
           <li class="nav__item">
-            <a href="#feedback" class="nav__link">Связаться с нами</a>
+            <a href="other.html" class="nav__link nav__link--current">RAKENNUSTEN</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="certificates.html" class="nav__link  ">TODISTUS</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#feedback" class="nav__link">YHTEYSTIEDOT</a>
           </li>
         </ul>
       </nav>
@@ -136,19 +155,30 @@
   <section class="feedback-wrap" id="feedback">
   <div class="container">
     <div class="feedback">
-      <h2 class="feedback__title title">Обратная связь</h2>
-      <form class="feedback__form form" action="#" method="GET">
+      <!-- <p class="feedback__text">AINA TURVALLINEN JA SIISTI TYÖMAA</p> -->
+      <div class="feedback__logo">
+        <picture class="feedback__picture">
+          <source srcset="img/info.webp" type="image/webp">
+          <img src="img/info.jpg" alt="AINA TURVALLINEN JA SIISTI TYÖMAA" class="feedback__img" width="200px"
+            height="300px">
+        </picture>
+      </div>
+      <div class="feedback__info">
+        <h2 class="feedback__title title">Обратная связь</h2>
+        <form class="feedback__form form" action="#" method="GET">
 
-        <label for="name" class="form__label hidden-text">Ваше имя</label>
-        <input type="text" id="name" placeholder="Как к вам обращаться?" class="form__input" name="user-name">
+          <label for="name" class="form__label hidden-text">Ваше имя</label>
+          <input type="text" id="name" placeholder="Как к вам обращаться?" class="form__input" name="user-name">
 
-        <label for="phone" class="form__label hidden-text">Номер телефона</label>
-        <input type="text" id="phone" placeholder="Номер телефона" class="form__input" name="user-phone">
+          <label for="phone" class="form__label hidden-text">Номер телефона</label>
+          <input type="text" id="phone" placeholder="Номер телефона" class="form__input" name="user-phone">
 
-        <button type="submit" class="form__btn" aria-label="Отправить форму">Перезвонить мне</button>
-        <span class="form__text">Заявка отправлена. Спасибо за обращение! Мы скоро перезвоним вам.</span>
+          <button type="submit" class="form__btn" aria-label="Отправить форму">Перезвонить мне</button>
+          <span class="form__text">Заявка отправлена. Спасибо за обращение! Мы скоро перезвоним вам.</span>
 
-      </form>
+        </form>
+        <p class="feedback__text">Также в будущем ТУТ возможно мы напишем наш адрес, на финском языке</p>
+      </div>
     </div>
   </div>
 </section>

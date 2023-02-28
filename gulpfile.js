@@ -22,7 +22,7 @@ var path = {
     images: 'src/img/*.{jpg,jpeg,png,webp,svg}',
     js: 'src/js/*.js',
     font: 'src/fonts/*.{woff,woff2,ttf}',
-    video: 'src/video/*.{mp4,ogv,webm}',
+    files: 'src/files/*.{jpg,jpeg,png,pdf}',
     svgcolor: 'src/img/svgcolor/*.svg',
     svg: 'src/img/svg/*.svg'
   },
@@ -32,7 +32,7 @@ var path = {
     images: 'build/img/',
     js: 'build/js/',
     font: 'build/fonts/',
-    video: 'build/video/',
+    files: 'build/files/',
     svgcolor: 'build/img/svgcolor/',
     svg: 'build/img/svg'
   },
@@ -40,7 +40,7 @@ var path = {
     html: 'src/**/*.html',
     styles: 'src/styles/**/*.scss',
     js: 'src/js/*.js',
-    video: 'src/video/*.{mp4,ogv,webm}',
+    files: 'src/files/*.{jpg,jpeg,png,pdf}',
     images: 'src/img/**/*.{jpg,jpeg,png,webp,svg}',
     svgcolor: 'src/img/svgcolor/*.svg',
     svg: 'src/img/svg/*.svg'
@@ -92,10 +92,10 @@ export const font = () => {
     .pipe(reload({ stream: true }));
 };
 
-export const video = () => {
+export const files = () => {
   return gulp
-    .src(path.src.video)
-    .pipe(gulp.dest(path.build.video))
+    .src(path.src.files)
+    .pipe(gulp.dest(path.build.files))
     .pipe(reload({ stream: true }));
 };
 
@@ -154,10 +154,10 @@ export const watchFiles = () => {
   gulp.watch([path.watch.styles], styles);
   gulp.watch([path.watch.images], images);
   gulp.watch([path.watch.js], js);
-  gulp.watch([path.watch.video], video);
+  gulp.watch([path.watch.files], files);
   gulp.watch([path.watch.svgcolor], svgcolor);
   gulp.watch([path.watch.svg], svg)
 };
 
-export const build = gulp.series(clean, gulp.parallel(html, styles, images, js, font, video, svgcolor, svg));
+export const build = gulp.series(clean, gulp.parallel(html, styles, images, js, font, files, svgcolor, svg));
 export const watch = gulp.parallel(watchFiles, browserSync);

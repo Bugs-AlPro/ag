@@ -1,19 +1,30 @@
 <section class="feedback-wrap" id="feedback">
   <div class="container">
     <div class="feedback">
-      <h2 class="feedback__title title">Обратная связь</h2>
-      <form class="feedback__form form" action="#" method="GET">
+      <!-- <p class="feedback__text">AINA TURVALLINEN JA SIISTI TYÖMAA</p> -->
+      <div class="feedback__logo">
+        <picture class="feedback__picture">
+          <source srcset="img/info.webp" type="image/webp">
+          <img src="img/info.jpg" alt="AINA TURVALLINEN JA SIISTI TYÖMAA" class="feedback__img" width="200px"
+            height="300px">
+        </picture>
+      </div>
+      <div class="feedback__info">
+        <h2 class="feedback__title title">Обратная связь</h2>
+        <form class="feedback__form form" action="#" method="GET">
 
-        <label for="name" class="form__label hidden-text">Ваше имя</label>
-        <input type="text" id="name" placeholder="Как к вам обращаться?" class="form__input" name="user-name">
+          <label for="name" class="form__label hidden-text">Ваше имя</label>
+          <input type="text" id="name" placeholder="Как к вам обращаться?" class="form__input" name="user-name">
 
-        <label for="phone" class="form__label hidden-text">Номер телефона</label>
-        <input type="text" id="phone" placeholder="Номер телефона" class="form__input" name="user-phone">
+          <label for="phone" class="form__label hidden-text">Номер телефона</label>
+          <input type="text" id="phone" placeholder="Номер телефона" class="form__input" name="user-phone">
 
-        <button type="submit" class="form__btn" aria-label="Отправить форму">Перезвонить мне</button>
-        <span class="form__text">Заявка отправлена. Спасибо за обращение! Мы скоро перезвоним вам.</span>
+          <button type="submit" class="form__btn" aria-label="Отправить форму">Перезвонить мне</button>
+          <span class="form__text">Заявка отправлена. Спасибо за обращение! Мы скоро перезвоним вам.</span>
 
-      </form>
+        </form>
+        <p class="feedback__text">Также в будущем ТУТ возможно мы напишем наш адрес, на финском языке</p>
+      </div>
     </div>
   </div>
 </section>
