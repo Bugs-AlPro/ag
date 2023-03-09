@@ -164,13 +164,20 @@
     // border-radius: 50%;
     // border: 5px solid gainsboro;
     // line-height: 50px;
-    margin: 20px;
+    margin: 20px 20px 20px 0;
+    // background-color: #0f685577; 
+    // box-shadow: 0 0 5px 5px hsla(0, 0%, 100%, 0.616);
 
     // color: wheat;
     &__img {
+      display: block;
       width: 130px;
       height: auto;
-      // background-color: aliceblue;
+      background-color: rgba(206, 206, 206, 0.575);
+      // filter: contrast(1.5);
+      // filter: brightness(1.2);
+      z-index: 2;
+      position: relative;
     }
   }
 

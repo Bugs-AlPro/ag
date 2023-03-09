@@ -145,7 +145,11 @@ li {
 
     }
 
+    &__item--roof {
+      // min-width: 250px;
+      transform: translateY(-20%);
 
+    }
 
     &__link {
       // border: 1px solid red;
@@ -160,6 +164,7 @@ li {
       // text-decoration: none;
       // gap: 1em;
       // aspect-ratio: 1;
+      box-shadow: 0 0 4px 4px hsla(0, 0%, 57%, 0.616);
     }
 
     &__img {
@@ -244,8 +249,8 @@ li {
     position: relative;
 
     &__img {
-      position: absolute;
-      bottom: 0;
+      // position: absolute;
+      // bottom: 0;
       width: 100%;
       height: auto;
       // max-height: 500px;
@@ -254,11 +259,15 @@ li {
 
   .prew-main {
     position: relative;
-    top: auto;
+    // top: auto;
     width: 100%;
-    left: auto;
+    // left: auto;
     text-align: center;
     padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
     &__logo {
       // height: 100px;
@@ -274,7 +283,7 @@ li {
 
     &__img {
       width: 100%;
-      max-width: 350px;
+      max-width: 250px;
       height: auto;
     }
 
@@ -282,11 +291,18 @@ li {
       text-transform: uppercase;
       color: gray;
       font-size: 1.5em;
+      display: none;
     }
 
     &__description {
       color: gray;
       font-size: 1.4em;
+      // flex-shrink: 1;
+      max-width: 400px;
+      // width: 50vw;
+      // align-self: center;
+      // align-items: center;
+      // min-width: 320px;
     }
   }
 
@@ -295,41 +311,44 @@ li {
   }
 
   .offer {
-    display: flex;
-
-    flex-wrap: wrap;
+    display: grid;
+    margin: 10px;
+    // flex-wrap: wrap;
     gap: 1em;
-    // grid-template-columns: 1fr 1fr;
-    // grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    // grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     justify-content: center;
     // align-items: center;
 
-    // &__item {
-    //   min-width: 250px;
+    &__item--roof {
+      // min-width: 250px;
+      transform: translateY(-20%);
 
-    // }
+    }
 
     &__link {
-      min-width: 250px;
+      // min-width: 250px;
       text-align: center;
-      width: 40vw;
+      // width: 40vw;
       // min-width: 200px;
-      max-width: 400px;
+      // max-width: 400px;
       line-height: 0;
       // padding: 30px;
       position: relative;
       display: block;
       // flex-direction: column;
       // justify-content: center;
-      // align-items: center;
+      align-items: center;
       text-decoration: none;
-      gap: 1em;
+      // gap: 1em;
       // border: 1px solid red;
+      box-shadow: 0 0 4px 4px hsla(0, 0%, 57%, 0.616);
     }
 
     &__img {
       // border: 1px solid red;
       width: 100%;
+      // max-width: 200px;
       height: auto;
     }
 
