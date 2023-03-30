@@ -60,6 +60,7 @@ li {
     &__img {
       width: 100%;
       height: auto;
+      // display: none;
     }
   }
 
@@ -253,6 +254,7 @@ li {
       // bottom: 0;
       width: 100%;
       height: auto;
+      // display: none;
       // max-height: 500px;
     }
   }
@@ -279,6 +281,7 @@ li {
       // margin: 20px;
       // color: gray;
       display: inline-block;
+      display: none;
     }
 
     &__img {
@@ -298,7 +301,7 @@ li {
       color: gray;
       font-size: 1.4em;
       // flex-shrink: 1;
-      max-width: 400px;
+      // max-width: 400px;
       // width: 50vw;
       // align-self: center;
       // align-items: center;

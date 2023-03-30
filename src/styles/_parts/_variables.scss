@@ -1,8 +1,17 @@
 // screen size
 $screen-xxs: 1px;
 $screen-xs: 300px;
-$screen-sm: 576px;
-$screen-md: 768px;
-$screen-lg: 1146px;
-$screen-xl: 1200px;
+$screen-sm: 570px;
+$screen-md: 400 px;
+$screen-lg: 974px;
+$screen-xl: 1340px;
 $screen-xxl: 1400px;
+
+:root {
+    --white: hsl(45, 29%, 89%);
+    --white-2: hsl(69, 21%, 75%);
+    --green: hsl(161, 11%, 35%);
+    --gray: hsl(215, 16%, 21%);
+    --black: hsl(220, 25%, 14%);
+
+}

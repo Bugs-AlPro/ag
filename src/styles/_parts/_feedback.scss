@@ -1,6 +1,6 @@
 .feedback-wrap {
   background-color: beige;
-  padding: 100px 0;
+  padding: 0 0;
 }
 
 @include media-up(lg) {
@@ -110,9 +110,9 @@
       //   max-width: 300px;
       // }
 
-      // &--foto {
-      //   max-width: 300px;
-      // }
+      &--foto {
+        display: none;
+      }
 
       // &--text {
       //   max-width: 300px;
