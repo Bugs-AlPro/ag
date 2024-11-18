@@ -174,7 +174,7 @@
     background-color: var(--gray);
   }
 }
-@media (min-width: 400px) and (max-width: 973.98px) {
+@media (min-width: 400 px) and (max-width: 973.98px) {
   .header-wrap {
     height: 120px;
     position: fixed;
@@ -312,7 +312,7 @@
     display: block;
   }
 }
-@media (max-width: 399.98px) {
+@media (max-width: 400 px-0.02) {
   .header-wrap {
     height: 120px;
     position: fixed;
@@ -550,9 +550,6 @@ li {
   }
   .offer__item {
     display: block;
-  }
-  .offer__item--roof {
-    transform: translateY(-20%);
   }
   .offer__link {
     position: relative;
