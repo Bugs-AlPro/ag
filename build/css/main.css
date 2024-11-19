@@ -659,9 +659,6 @@ li {
     grid-template-columns: 1fr 1fr;
     justify-content: center;
   }
-  .offer__item--roof {
-    transform: translateY(-20%);
-  }
   .offer__link {
     text-align: center;
     line-height: 0;
