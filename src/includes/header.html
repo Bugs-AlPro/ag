@@ -2,6 +2,10 @@
   <div class="container container--header">
     <header class="header">
 
+        <div class="prew-img">
+          {{ imageJpg('prew-img__picture', 'link-roof', 'prew-img__img', 'Красивый вид', '150', '100') }}
+        </div>
+
       <div class="logo">
 
         <picture class="logo__picture {{ pagesDisable }}">
@@ -14,13 +18,25 @@
             <source srcset="img/small-png-logo.webp" type="image/webp">
             <img src="img/small-png-logo.png" alt="Cosapro Logo" class="logo__img" width="80px" height="50px">
           </picture>
-          <div class="logo__text">Cosapro OY</div>
+          <!-- <div class="logo__text">Cosapro OY</div> -->
         </a>
 
-        <div class="logo__text {{ pagesDisable }}">Cosapro OY</div>
+        <!-- <div class="logo__text {{ pagesDisable }}">Cosapro OY</div> -->
 
       </div>
-      <button class="header-btn" aria-label="Меню" type="button">Menu</button>
+
+      <div class="prew-main">
+        <!-- <div class="prew-main__logo">
+          <picture class="prew-main__picture {{ pagesDisable }}">
+            <source srcset="img/small-png-logo.webp" type="image/webp">
+            <img src="img/small-png-logo.png" alt="Cosapro Logo" class="prew-main__img" width="160px" height="100px">
+          </picture>  
+        </div> -->
+        <h1 class="prew-main__title">Cosapro OY</h1>
+        <!-- <p class="prew-main__description">Какое-то описание, что тут можно найти. Кому и почему может быть полезный этот
+          сайт.</p> -->
+      </div>
+      <!-- <button class="header-btn" aria-label="Меню" type="button">Menu</button> -->
       <nav class="nav">
         <ul class="nav__list">
 
@@ -44,17 +60,15 @@
             <a href="other.html" class="nav__link {{ otherCurrent }}">RAKENNUSTEN</a>
           </li> -->
 
-          <!-- <li class="nav__item">
-            <a href="certificates.html" class="nav__link {{ certificatesCurrent }} ">TODISTUS</a>
-          </li> -->
+          <li class="nav__item">
+            <a href="certificates.html" class="nav__link {{ certificatesCurrent }} ">OSALLISTUIMME</a>
+          </li>
 
           <li class="nav__item">
             <a href="#feedback" class="nav__link">YHTEYSTIEDOT</a>
           </li>
         </ul>
       </nav>
-
-
 
     </header>
 
